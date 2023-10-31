@@ -101,7 +101,6 @@ span {
     background: transparent;
     border-radius: 4rem;
     border: 2px solid rgba(255, 255, 255, .2);
-    /*box-shadow: 0 0 1rem var(--main-color);*/
     font-size: 32px;
     color: var(--text-color);
     letter-spacing: .1rem;
@@ -109,18 +108,8 @@ span {
     transition: .5s ease;
 }
 
-/*.btn::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #fff;
-    transition: .3s ease;
-}*/
+
 .btn:hover {
-    /*box-shadow: none;*/
     box-shadow: 0 0 1rem var(--main-color);
     text-decoration: underline;
     color: var(--main-color);
@@ -156,12 +145,6 @@ span {
     text-align: center;
     color: var(--main-color);
 }
-/*
-.about-content p {
-    font-size: 32px;
-    margin: 2rem 0 3rem;
-    text-align: center;
-}*/
 
 .overlay-about {
     width: 700px;
@@ -211,10 +194,19 @@ span {
     list-style: none;
 }
 
+.pats img {
+     width:80px;
+     height:50px;
+    /* background: url(http://goo.gl/vyAs27) no-repeat scroll 0 0;   */
+}
 .feds ul{
     list-style: none;
 }
 
+.feds img {
+    width: 80px;
+    height: 50px;
+}
 /*some crzy shit about to happen*/
 .overlay-acts {
     background: transparent;
@@ -327,21 +319,11 @@ span {
     text-decoration: underline;
 }
 
-
-/*@media (min-aspect-ratio: 16/9){
-    .sports-box {
-        width: 100%;
-        height: auto;
-    }
+.contact {
+    display: block;
+    align-items: center;
+    justify-content: center;
 }
-
-@media (max-aspect-ratio: 16/9){
-    .sports-box {
-        width: auto;
-        height: 100%;
-    }
-}*/
-
 .contact-info{
     padding: 40px;
 }
@@ -358,10 +340,14 @@ span {
 
 .contact-info ul a {
     text-decoration: none;
+    color: var(--main-color);
 }
 
 .contact-info ul a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    /* box-shadow: 0 0 1rem var(--main-color); */
+    text-decoration: var(--main-color) underline;
+    transform: scale(1.1);
 }
 .contact-form {
     padding: 40px;
@@ -393,14 +379,165 @@ textarea {
 }
 
 button[type="submit"] {
-    background: transparent;
+    /* background: transparent;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, .2); */
+    display: inline;
+    padding: 12px;
+    background: transparent;
+    border-radius: 4rem;
     border: 2px solid rgba(255, 255, 255, .2);
+    font-size: 32px;
+    color: var(--text-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
 }
 
 button:hover {
-    text-decoration: underline;
+    box-shadow: 0 0 1rem var(--main-color);
+    /* text-decoration: underline; */
+    color: var(--main-color);
+}
+
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .content {
+        padding-bottom: 7rem;
+    }
+
+    .content h1 {
+        font-size: 200%;
+    }
+
+    .activities {
+        padding-bottom: 7rem;
+    }
+
+    .overlay-acts h2 {
+        font-size: 200%;
+        font-weight: 700;
+    }
+
+    .contact {
+        min-height: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+
+    .sports-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .header {
+        position: fixed;
+    }
+
+   .home {
+    flex-direction: column;
+   }
+
+   .content h1 {
+    font-size: 200%;
+    }
+
+   .about {
+    flex-direction: column-reverse;
+   }
+
+   .about img {
+    width: 70vw;
+    margin-top: 4rem;
+   }
+   .content h2 {
+    margin-bottom: 3rem;
+   }
+   .content-pats {
+    justify-content: center;
+   }
+
+    .pats{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+   }
+
+   .overlay-acts h2 {
+    margin-bottom: 3rem;
+    font-size: 100%;
+    font-weight: 600;
+   }
+
+   .sports-container {
+    grid-template-columns: repeat(2, 1fr);
+   }
+
+   .contact {
+    align-content: normal;
+    justify-content: center;
+    text-align: center;
+   }
+}
+
+@media (max-width: 617px) {
+    .sports-container {
+        grid-template-columns: 1fr;
+    }
+
+    .overlay-acts {
+        font-weight: 600;
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .contact-form form .form-group input {
+        width: 100%;
+    }
 }
