@@ -17,6 +17,9 @@
             <a href="#patners">Patners</a>
             <a href="#activities">Activities</a>
             <a href="#contact">Contact</a>
+            <a href="#contact">feedback</a>
+            <a href="temp.php">convert temp</a>
+            <a href="bmi_calc.php">calc BMI</a>
         </nav>
     </header>
 
@@ -59,15 +62,14 @@
                     <ul>
                         <li>
                             <img src="images/nike logo.jpeg">
-                            Nike
+                            <a href="https://www.nike.com/za/">Nike</a>
                         </li>
                         <li>
                             <img src="images/spalding logo.png" />
-                            Spalding
-                        </li>
+                            <a href="https://www.spalding.com/">spalding</a>                        </li>
                         <li>
                             <img src="images/stanchart img.jpeg" />
-                            standard chartered
+                            <a href="https://www.sc.com/en/">Standard Chartered</a>
                         </li>
                     </ul>
                 </div>
@@ -76,15 +78,15 @@
                     <ul>
                         <li>
                             <img src="images/fkf logo.png" />
-                            football kenya federation (FKF)
+                            <a href="https://footballkenya.org/">Football Kenya Federation(FKF)</a>
                         </li>
                         <li>
                             <img src="images/AK-Logo.png" />
-                            Athletics Kenya
+                            <a href="https://www.athleticskenya.or.ke/">Athletics Kenya</a>
                         </li>
                         <li>
                             <img src="images/e-sports logo.jpeg" />
-                            E-sports kenya Federation
+                            <a href="https://esportskenyafederation.or.ke/esports-gaming/">E-Sports Kenya Federation</a>
                         </li>
                     </ul>
                 </div>
@@ -97,67 +99,43 @@
         <h2>activities offered</h2>
         <div class="sports-container">
             <div class="sports-box">
-                    <img src="images/ball-bka.png">
+                    <div class="pic-box">
+                        <img src="images/ball-bka.png">
+                    </div>
                     <div class="sports-layer">
                         <h3>Basketball</h3>
                         <p>Our club has been a proud producer of athletes majoring in this kind of sport</p>
-                        <a href="basketball.html">Read More</a>
+                        <a href="basket.html">Read More</a>
                     </div>
                  </div>
 
                 <div class="sports-box">
                 
-                    <img src="images/soccer.png">
+                    <div class="pic-box">
+                        <img src="images/soccer.png">
+                    </div>
                     <div class="sports-layer">
                         <h3>Football</h3>
                         <p>Our club has been a proud producer of athletes majoring in this kind of sport</p>
-                        <a href="#">Read more</a>
+                        <a href="football.html">Read more</a>
                     </div>
                 
                 </div>
             
                  <div class="sports-box">
                 
-                    <img src="images/swim.png">
+                    <div class="pic-box">
+                        <img src="images/swim.png">
+                    </div>
                     <div class="sports-layer">
                         <h3>Swimming</h3>
                         <p>Our club has been a proud producer of athletes majoring in this kind of sport</p>
-                        <a href="#">Read more</a>
+                        <a href="swim.html">Read more</a>
                     </div>
                 
                 </div>
             
-                <div class="sports-box">
-                
-                    <img src="images/tennis.png">
-                    <div class="sports-layer">
-                        <h3>Tennis</h3>
-                        <p>Our club has been a proud producer of athletes majoring in this kind of sport</p>
-                        <a href="#">Read more</a>
-                    </div>
-                
-                </div>
-            
-                <div class="sports-box">
-                
-                        <img src="images/golf.png">
-                        <div class="sports-layer">
-                            <h3>Golf</h3>
-                            <p>Our club has been a proud producer of athletes majoring in this kind of sport</p>
-                            <a href="#">Read more</a>
-                        </div>
-                
-                </div> 
-            
-                <div class="sports-box">
-                
-                        <img src="images/gymnasium.png">
-                        <div class="sports-layer">
-                            <h3>Gymnasium</h3>
-                            <p>Our club has been a proud producer of athletes majoring in this kind of sport</p>
-                            <a href="#">Read more</a>
-                        </div>
-                </div>
+               
             </div>
         </div>
     </section>
@@ -168,20 +146,20 @@
             <h2>Contact Information</h2>
             <p>If you have any questions or need assistance, please don't hesitate to contact us:</p>
             <ul>
-                <li>Email: <a href="mailto:contact@example.com">contact@example.com</a></li>
+                <li>Email: <a href="mailto:thefirstclass@gmail.com">thefirstclass@gmail.com</a></li>
                 <li>Phone: +1 (123) 456-7890</li>
-                <li>Address: 123 Main Street, Cityville</li>
-                <li><a href="#">facebook</a></li>
-                <li><a href="#">twitter</a></li>
-                <li><a href="#">linkedin</a></li>
-                <li><a href="#">instagram</a></li>
+                <li>Address: 123 Main Street, Nairobi</li>
+                <li><a href="facebook.com">facebook</a></li>
+                <li><a href="twitter.com">twitter</a></li>
+                <li><a href="linkedin.com">linkedin</a></li>
+                <li><a href="instagram.com">instagram</a></li>
                 
             </ul>
         </div>
         <div class="contact-form">
-            <h2>Contact Form</h2>
-        <p>We'd love to hear from you! Please fill out the form below:</p>
-        <form action="#" method="post">
+            <h2>Please give us your feedback!</h2>
+        <p>We'd love to hear from you!!</p>
+        <form onsubmit="return validateForm" method="post">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -201,6 +179,40 @@
         </form>
         </div>
     </section>
+    
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            var errors = [];
+
+            if (name.trim() === "") {
+                errors.push("Name is required.");
+            }
+
+            if (!isValidEmail(email)) {
+                errors.push("Invalid email format.");
+            }
+
+            if (message.trim() === "") {
+                errors.push("Message is required.");
+            }
+
+            if (errors.length > 0) {
+                alert(errors.join("\n"));
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission
+        }
+
+        function isValidEmail(email) {
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            return emailPattern.test(email);
+        }
+    </script>
 
 </body>
 </html>

@@ -111,7 +111,7 @@ span {
 
 .btn:hover {
     box-shadow: 0 0 1rem var(--main-color);
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--main-color);
     width: 100%;
 }
@@ -187,22 +187,39 @@ span {
     justify-content: space-between;
     align-items: center;
     text-align: left;
-    /*min-height: 100vh;*/
 }
 
 .pats ul{
     list-style: none;
 }
 
+.pats a {
+    color: var(--text-color);
+    transition: .3s ease;
+}
+
+.pats a:hover {
+    text-decoration: underline;
+    color: #0ef;
+}
+
 .pats img {
      width:80px;
      height:50px;
-    /* background: url(http://goo.gl/vyAs27) no-repeat scroll 0 0;   */
 }
 .feds ul{
     list-style: none;
 }
 
+.feds a {
+    color: var(--text-color);
+    transition: .3s ease;
+}
+
+.feds a:hover {
+    text-decoration: underline;
+    color: #0ef;
+}
 .feds img {
     width: 80px;
     height: 50px;
@@ -213,7 +230,6 @@ span {
     border-radius: 10px;
     padding: 30px 40px;
     border: 2px solid rgba(255, 255, 255, .2);
-    /*display: block;*/
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -222,6 +238,7 @@ span {
 .overlay-acts h2 {
     padding: 40px;
     margin-top: 40px;
+    color: var(--main-color);
     font-weight: 600;
     font-size: 64px;
     text-align: center;
@@ -242,28 +259,17 @@ span {
     display: flex;
 }
 
-.sports-box img {
+ .sports-box img {
     width: 100%;
+    object-fit: cover;
     transition: .5s ease;
-}
+} 
+
 
 .sports-box:hover img {
     transform: scale(1.1);
 }
-/*.sports-box .sports-layer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /*background: linear-gradient(rgba(0,0,0,.1), var(blue));*
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: column;
-}
 
-*/
 
 .sports-box .sports-layer {
     position: absolute;
@@ -272,7 +278,6 @@ span {
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
-    /*background: transparent;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -305,9 +310,6 @@ span {
     align-items: center;
     font-weight: 700;
     font-size: 18px;
-    /*text-decoration: underline;
-    /*width: 5re;
-    height: 5rem;*/
     padding: 20px;
     color: antiquewhite;
     background: transparent;
@@ -317,18 +319,21 @@ span {
 
 .sports-layer a:hover {
     text-decoration: underline;
+    color: #000;
 }
 
 .contact {
     display: block;
-    align-items: center;
+    align-content: normal;
     justify-content: center;
+    text-align: center;
 }
 .contact-info{
     padding: 40px;
 }
 
 .contact-info h2 {
+    text-align: center;
     font-weight: 600;
     font-size: 32px;
     color: var(--main-color);
@@ -338,16 +343,14 @@ span {
     list-style: none;
 }
 
-.contact-info ul a {
+.contact-info a {
     text-decoration: none;
     color: var(--main-color);
 }
 
-.contact-info ul a:hover {
-    /* text-decoration: underline; */
-    /* box-shadow: 0 0 1rem var(--main-color); */
-    text-decoration: var(--main-color) underline;
-    transform: scale(1.1);
+.contact-info a:hover {
+    text-decoration: var(--text-color) underline;
+    font-size: 18px;
 }
 .contact-form {
     padding: 40px;
@@ -363,15 +366,16 @@ span {
 
 label {
     display: block;
+    text-align: center;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #555;
+    color: rgb(15, 188, 231);
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -379,12 +383,6 @@ textarea {
 }
 
 button[type="submit"] {
-    /* background: transparent;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    border: 2px solid rgba(255, 255, 255, .2); */
     display: inline;
     padding: 12px;
     background: transparent;
@@ -399,7 +397,6 @@ button[type="submit"] {
 
 button:hover {
     box-shadow: 0 0 1rem var(--main-color);
-    /* text-decoration: underline; */
     color: var(--main-color);
 }
 

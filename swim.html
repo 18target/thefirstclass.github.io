@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swimming Activity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* background-color: #f0f0f0; */
+            background: url(images/woda.jpg);
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #0099cc;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        p {
+            margin: 10px;
+            color: antiquewhite;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            margin: 0 10px;
+            transition: .3s ease-in;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #0099cc;
+            font-size: 24px;
+        }
+
+        h2 {
+            background-color: transparent;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #0099cc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0099cc;
+            color: #fff;
+        }
+
+        h3 {
+            background-color: transparent;
+            color: #fff;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .intro1 {
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 10px;
+            padding: 40px;
+        }
+
+        .intro2 {
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            margin: 20px;
+        }
+
+        .intro2 div {
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 10px; 
+            transition: .3s ease-in;
+        }
+        .intro2 div:hover {
+            font-size: 24px;
+        }
+
+        .navigation {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .intro3 {
+            justify-content: center;
+            margin: 60px;
+            padding: 12px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 10px;
+            transition: .3s ease-in;  
+        }
+
+        .intro3 h2{
+            font-size: 32px;
+        }
+        .intro3 table {
+            padding: 12px;
+        }
+
+        .intro3:hover {
+            font-size: 24px;
+        }
+        .intro4 {
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin: 50px;  
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 10px;          
+        }
+
+        .intro4 h3{
+            font-size: 32px;
+            background: transparent;
+        }
+        .intro4 p {
+            color: #fff;
+            font-size: 26px;
+        }
+
+        .intro4 a {
+            color: white;
+            font-size: 25px;
+            padding: 12px;
+            text-decoration: underline;
+            font-weight: 500;
+            transition: .3s ease-in;
+        }
+
+        .intro4 a:hover {
+            color: #0099cc;
+            font-size: 20px;
+            text-decoration: none;
+
+        }
+
+        .intro {
+            margin: 50px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 10px;
+            transition: .3s ease-in;   
+        }
+
+        .intro a{
+            font-size: 24px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .intro a:hover {
+            font-weight: 900;
+            color: #0099cc;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        .navigation {
+            margin-top: 20px;
+            text-align: left;
+            justify-content: space-between;
+        }
+
+        .navigation a {
+            display: block;
+            margin-left: 30px;
+            padding: 12px;
+            color: #000;
+            font-weight: 500;
+            transition: .3s ease-in;
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+            color: #0099cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro1">
+        <h1>The First Class Swimming</h1>
+      <p style="font-size: 28px; font-weight: 600; color:black">Welcome to the First Class Swimming</p>
+      <a href="#">Learn more</a>
+       <a href="#">Join us</a>
+    </div>
+
+    <div class="intro2">
+        <div class="know">
+            <h2>Know Your Sport</h2>
+            <p>Get to interact with our experienced athletes of this sport both off and on the competitions</p>
+        </div>
+    
+        <div class="facts" style="margin-right: 50px;">
+            <h2 style="color: #fff;">Fun Facts</h2>
+
+            <ul>
+                <li><p>Did you know, swimming is good for weightloss?</p></li>
+                <li><p>Did you know, swimming regularly can help decrease anxiety, improve stres management and boost your overall state of mind?</p></li>
+                <li><p>Did you know, synchronized swimming first appeared in the 1984 olympics?</p> </li>
+            </ul>
+
+        </div>
+    </div>
+    
+    <div class="intro3">
+        <h2>Upcoming Events</h2>
+        <table>
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>Junior League Tournament</td>
+                <td>3rd-4th December</td>
+                <td>10am</td>
+                <td>Main Court</td>
+            </tr>
+            <tr>
+                <td>New Year Tournament</td>
+                <td>7th-10th January</td>
+                <td>10am</td>
+                <td>Main Court</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="intro4">
+        <h3>Get Your Tickets for the Next Game!!</h3>
+        <p>You can get your tickets via these outlets (50% off for our registered members):</p>
+        <a id="Gate" style="cursor: pointer;">gate</a>
+        <a href="#">Ticket Sasa</a>
+    </div>
+
+   <div class="intro"> <h2>Quick Navigation</h2>
+    <div class="navigation">
+        <a href="index.html#home">Homepage</a>
+        <a href="index.html#about">About The First Class</a>
+        <a href="index.html#partners">Partnerships</a>
+        <a href="index.html#activities">Other Sports Offered</a>
+        <a href="index.html#contact">Contact Us</a>
+        <a href="index.html#feedback">Give Us Your Feedback</a>
+    </div>
+    </div>
+
+    <script>
+        document.getElementById("Gate").onclick = function buyTicketsGate() {
+        var isConfirmed = confirm("Please buy your tickets at the gate.");
+
+    
+        if (isConfirmed) {
+        // Show an alert with a message
+        alert("Thank you for buying your tickets at the gate!");
+        } else {
+    
+        alert("Please note that tickets cannot be refunded once purchased.");
+        }
+      }
+
+        // Call the function
+        buyTicketsGate();
+    </script>
+</body>
+</html>
